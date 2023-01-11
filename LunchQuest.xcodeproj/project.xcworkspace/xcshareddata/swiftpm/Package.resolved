@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "autolayouthelpers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/AutolayoutHelpers",
+      "state" : {
+        "revision" : "26797e09f404cbdb34c1b7c3d809c90ad0c09356",
+        "version" : "1.1.2"
+      }
+    },
+    {
+      "identity" : "minidepin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/MiniDepIn",
+      "state" : {
+        "revision" : "47b9a870c5fcfd0d50dfa02a76b5898d5b55c991",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "stronglytypedid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/StronglyTypedID",
+      "state" : {
+        "revision" : "437132c1e0f536961b58af280e9077fb180bf8b7",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

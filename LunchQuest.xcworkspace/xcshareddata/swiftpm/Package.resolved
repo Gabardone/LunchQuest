@@ -1,0 +1,58 @@
+{
+  "pins" : [
+    {
+      "identity" : "autolayouthelpers",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/AutolayoutHelpers",
+      "state" : {
+        "revision" : "26797e09f404cbdb34c1b7c3d809c90ad0c09356",
+        "version" : "1.1.2"
+      }
+    },
+    {
+      "identity" : "iutilitis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/Iutilitis.git",
+      "state" : {
+        "revision" : "3c4c4b6f7082ad124e7a411bf8c1b1686efc92ef"
+      }
+    },
+    {
+      "identity" : "minidepin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/MiniDepIn",
+      "state" : {
+        "revision" : "47b9a870c5fcfd0d50dfa02a76b5898d5b55c991",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "stronglytypedid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/StronglyTypedID",
+      "state" : {
+        "revision" : "437132c1e0f536961b58af280e9077fb180bf8b7",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftcache",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/SwiftCache.git",
+      "state" : {
+        "revision" : "87de63f8ad11fec28f712a0742a554422559a3a0",
+        "version" : "0.0.1-alpha"
+      }
+    },
+    {
+      "identity" : "swiftux",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/SwiftUX.git",
+      "state" : {
+        "revision" : "94a3a2502b2788a25901a4a862b478f71cf5579d",
+        "version" : "0.0.1-alpha"
+      }
+    }
+  ],
+  "version" : 2
+}
