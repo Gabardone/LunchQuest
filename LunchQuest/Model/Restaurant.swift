@@ -67,7 +67,11 @@ extension Restaurant {
 
         switch (ratingString, reviewCountString) {
         case (.none, .none):
-            return "Unrated"
+            return NSLocalizedString(
+                "RESTAURANT_REVIEW_UNRATED",
+                value: "Unrated",
+                comment: "User visible string for a restaurant with no rating set at all"
+            )
 
         case let (.some(ratingString), .none):
             return ratingString
