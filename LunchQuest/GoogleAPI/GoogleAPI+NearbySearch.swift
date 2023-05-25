@@ -23,30 +23,15 @@ extension GoogleAPI {
     /**
      A class that runs the nearby search GoogleAPI for the user's current location. It is the default app's
      implementation of the `RestaurantPersistence` dependency.
-
-     Inherits from `NSObject` as to being able to adopt the `CLLocationManagerDelegate` protocol.
-     - Todo: Refactor `CLLocationManager` wrangling into façaded dependency.
      */
-    class NearbySearch: NSObject {
+    class NearbySearch {
         init(dependencies: GlobalDependencies = .default) {
             self.dependencies = dependencies
-
-            super.init()
-
-            locationManager.delegate = self
         }
 
         // MARK: - Stored Properties
 
-        private let dependencies: NetworkDependency
-
-        let locationManager = CLLocationManager()
-
-        var authRequestContinuation: CheckedContinuation<Void, Never>?
-
-        var lastBestLocation: CLLocation?
-
-        var currentLocationContinuation: CheckedContinuation<CLLocation, Error>?
+        let dependencies: NetworkDependency & LocationDependency
     }
 }
 

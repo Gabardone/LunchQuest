@@ -16,6 +16,8 @@
 		0825A1372A0B2536006576A2 /* RestaurantDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A1392A0B2536006576A2 /* RestaurantDetailsView.xib */; };
 		0825A13A2A0B2542006576A2 /* NearbySearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A13C2A0B2542006576A2 /* NearbySearchResultsView.xib */; };
 		0825A13E2A0B260D006576A2 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A13D2A0B260D006576A2 /* RestaurantController.swift */; };
+		0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */; };
+		0858B12B2A195FAA00B05E58 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B12A2A195FAA00B05E58 /* LocationManager.swift */; };
 		086193382A194EE500632E73 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086193372A194EE500632E73 /* RestaurantTests.swift */; };
 		087ADDC229D524E6006C54C4 /* URLSessionNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087ADDC129D524E6006C54C4 /* URLSessionNetwork.swift */; };
 		087ADDC629D661BB006C54C4 /* NearbySearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */; };
@@ -79,6 +81,8 @@
 		0825A1382A0B2536006576A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RestaurantDetailsView.xib; sourceTree = "<group>"; };
 		0825A13B2A0B2542006576A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NearbySearchResultsView.xib; sourceTree = "<group>"; };
 		0825A13D2A0B260D006576A2 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPITests.swift; sourceTree = "<group>"; };
+		0858B12A2A195FAA00B05E58 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		086193372A194EE500632E73 /* RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTests.swift; sourceTree = "<group>"; };
 		087ADDC129D524E6006C54C4 /* URLSessionNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetwork.swift; sourceTree = "<group>"; };
 		087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,14 @@
 			path = RestaurantDetails;
 			sourceTree = "<group>";
 		};
+		0858B1292A195DC200B05E58 /* GoogleAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */,
+			);
+			path = GoogleAPI;
+			sourceTree = "<group>";
+		};
 		086193362A194ED100632E73 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,15 +209,16 @@
 			path = "Nearby Search";
 			sourceTree = "<group>";
 		};
-		087DC5D12974E2710010CA6D /* Persistence */ = {
+		087DC5D12974E2710010CA6D /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0858B12A2A195FAA00B05E58 /* LocationManager.swift */,
 				08A788D8297558BB00C0DAF3 /* Network.swift */,
 				08CCA2BB29FF4322002FF774 /* PhotoCache.swift */,
 				087DC5CC2974D1F00010CA6D /* RestaurantPersistence.swift */,
 				087ADDC129D524E6006C54C4 /* URLSessionNetwork.swift */,
 			);
-			path = Persistence;
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		087DC5D22974E2860010CA6D /* Application */ = {
@@ -293,7 +306,7 @@
 				08A788DA2975D51700C0DAF3 /* Model */,
 				0825A12B2A09CE5C006576A2 /* GoogleAPI */,
 				087DC5D02974E25D0010CA6D /* Nearby Search */,
-				087DC5D12974E2710010CA6D /* Persistence */,
+				087DC5D12974E2710010CA6D /* Dependencies */,
 				087ADDC329D6614A006C54C4 /* Nearby Search Results Display */,
 				08C0C51A29D7B8E3002CB290 /* Restaurants List Display */,
 				08C0C51F29D7B9F8002CB290 /* Restaurants Map Display */,
@@ -305,6 +318,7 @@
 		08F7DDB7296E58A40097FC9C /* LunchQuestTests */ = {
 			isa = PBXGroup;
 			children = (
+				0858B1292A195DC200B05E58 /* GoogleAPI */,
 				086193362A194ED100632E73 /* Model */,
 			);
 			path = LunchQuestTests;
@@ -475,6 +489,7 @@
 				0825A1352A0B252F006576A2 /* RestaurantDetailsViewController.swift in Sources */,
 				08C0C52B29DD0D90002CB290 /* RestaurantListCell.swift in Sources */,
 				08F7DDA6296E58A30097FC9C /* NearbySearchViewController.swift in Sources */,
+				0858B12B2A195FAA00B05E58 /* LocationManager.swift in Sources */,
 				08CD94DE2A087C3D00AADE17 /* RestaurantSearchResultsController.swift in Sources */,
 				08F7DDA2296E58A30097FC9C /* AppDelegate.swift in Sources */,
 				08C0C51D29D7B915002CB290 /* RestaurantsListViewController.swift in Sources */,
@@ -505,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				086193382A194EE500632E73 /* RestaurantTests.swift in Sources */,
+				0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,7 +923,7 @@
 			repositoryURL = "https://github.com/Gabardone/Iutilitis.git";
 			requirement = {
 				kind = revision;
-				revision = 3c4c4b6f7082ad124e7a411bf8c1b1686efc92ef;
+				revision = aff12366a94caede9472d7009e50e9812ee37b59;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
