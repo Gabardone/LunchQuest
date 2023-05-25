@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
      These are the app's root dependencies, modify this logic or change them before they get passed along if you want
      the app to run on modified global dependencies.
      */
-    private lazy var dependencies: RestaurantPersistenceDependency & LocationDependency = GlobalDependencies.default
+    private lazy var dependencies: RestaurantPersistenceDependency = GlobalDependencies.default
 
     var window: UIWindow?
 
@@ -27,9 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else {
             return
         }
-
-        // Initialize the location dependency (needs to happen on the main thread).
-        _ = dependencies.locationManager
 
         // Initialize the controller.
         let searchController = NearbySearchController(

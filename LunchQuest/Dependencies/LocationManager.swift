@@ -94,15 +94,18 @@ extension GlobalDependencies: LocationDependency {
 /**
  A wrapper for the system's location manager.
 
- While the basic access and request methods of `CLLocationManager` don't need wrapping, the delegate methods are harder
+ While basic access and request methods of `CLLocationManager` doesn't need wrapping, the delegate methods are harder
  to façade properly. Since almost all `CLLocationManagerDelegate` methods are purely reactive and the one that isn't we
  don't need, we reduce the dependency surface of the protocol façade by translating the delegate methods into combine
  subscriptions.
+
+ All of the interaction with our private `CLLocationManager` instance is redirected to the main thread since the class
+ only works with an active runloop on whichever thread it is initialized and setting up a custom one isn't worth it.
+ Thankfully all operations of `LocationManager` are unidirectional so the asynchronous setup shouldn't be a problem.
  */
 class SystemLocationManager: NSObject {
     override init() {
-        self.locationManager = CLLocationManager()
-        self.authorizationStatusSubject = .init(locationManager.authorizationStatus)
+        self.authorizationStatusSubject = .init(.notDetermined)
         self.authorizationStatusProperty = .init(
             updates: authorizationStatusSubject.removeDuplicates().dropFirst(),
             getter: { [authorizationStatusSubject] in
@@ -117,12 +120,16 @@ class SystemLocationManager: NSObject {
 
         super.init()
 
-        locationManager.delegate = self
+        DispatchQueue.main.async {
+            let locationManager = CLLocationManager()
+            self.locationManager = locationManager
+            locationManager.delegate = self
+        }
     }
 
     private let runLoop = RunLoop.current
 
-    private let locationManager: CLLocationManager
+    private var locationManager: CLLocationManager? = nil
 
     private let authorizationStatusSubject: CurrentValueSubject<CLAuthorizationStatus, Never>
 
@@ -145,15 +152,21 @@ extension SystemLocationManager: LocationManager {
     }
 
     func requestWhenInUseAuthorization() {
-        locationManager.requestWhenInUseAuthorization()
+        DispatchQueue.main.async {
+            self.locationManager?.requestWhenInUseAuthorization()
+        }
     }
 
     func startUpdatingLocation() {
-        locationManager.startUpdatingLocation()
+        DispatchQueue.main.async {
+            self.locationManager?.startUpdatingLocation()
+        }
     }
 
     func stopUpdatingLocation() {
-        locationManager.stopUpdatingLocation()
+        DispatchQueue.main.async {
+            self.locationManager?.stopUpdatingLocation()
+        }
     }
 }
 
