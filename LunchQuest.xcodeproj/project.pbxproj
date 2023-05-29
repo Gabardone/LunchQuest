@@ -16,10 +16,11 @@
 		0825A1372A0B2536006576A2 /* RestaurantDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A1392A0B2536006576A2 /* RestaurantDetailsView.xib */; };
 		0825A13A2A0B2542006576A2 /* NearbySearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A13C2A0B2542006576A2 /* NearbySearchResultsView.xib */; };
 		0825A13E2A0B260D006576A2 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A13D2A0B260D006576A2 /* RestaurantController.swift */; };
+		0830DCE62A23CE2D00E4DE38 /* LocationDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 0830DCE52A23CE2D00E4DE38 /* LocationDependency */; };
+		0830DCE82A23CE2D00E4DE38 /* MiniDePin in Frameworks */ = {isa = PBXBuildFile; productRef = 0830DCE72A23CE2D00E4DE38 /* MiniDePin */; };
+		0830DCEA2A2432CF00E4DE38 /* NetworkDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 0830DCE92A2432CF00E4DE38 /* NetworkDependency */; };
 		0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */; };
-		0858B12B2A195FAA00B05E58 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B12A2A195FAA00B05E58 /* LocationManager.swift */; };
 		086193382A194EE500632E73 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086193372A194EE500632E73 /* RestaurantTests.swift */; };
-		087ADDC229D524E6006C54C4 /* URLSessionNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087ADDC129D524E6006C54C4 /* URLSessionNetwork.swift */; };
 		087ADDC629D661BB006C54C4 /* NearbySearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */; };
 		087ADDC929D66214006C54C4 /* RestaurantsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087ADDC829D66214006C54C4 /* RestaurantsListController.swift */; };
 		087DC5C92974D0480010CA6D /* NearbySearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC5C82974D0480010CA6D /* NearbySearchController.swift */; };
@@ -27,7 +28,6 @@
 		087DC5CD2974D1F00010CA6D /* RestaurantPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC5CC2974D1F00010CA6D /* RestaurantPersistence.swift */; };
 		087DC5CF2974DBC70010CA6D /* GoogleAPI+NearbySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC5CE2974DBC70010CA6D /* GoogleAPI+NearbySearch.swift */; };
 		087DC5D82974E3940010CA6D /* NearbySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087DC5DA2974E3940010CA6D /* NearbySearchView.xib */; };
-		08A788D9297558BB00C0DAF3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A788D8297558BB00C0DAF3 /* Network.swift */; };
 		08A788DC2975D52800C0DAF3 /* GoogleAPI+NearbySearchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A788DB2975D52800C0DAF3 /* GoogleAPI+NearbySearchPayload.swift */; };
 		08C0C51D29D7B915002CB290 /* RestaurantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0C51B29D7B915002CB290 /* RestaurantsListViewController.swift */; };
 		08C0C52129D7BA1B002CB290 /* RestaurantsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0C52029D7BA1B002CB290 /* RestaurantsMapViewController.swift */; };
@@ -40,7 +40,6 @@
 		08CD94DC2A08796500AADE17 /* RestaurantSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD94DB2A08796500AADE17 /* RestaurantSearchResults.swift */; };
 		08CD94DE2A087C3D00AADE17 /* RestaurantSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD94DD2A087C3D00AADE17 /* RestaurantSearchResultsController.swift */; };
 		08CD94E02A08884E00AADE17 /* RestaurantsMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08CD94E22A08884E00AADE17 /* RestaurantsMapView.xib */; };
-		08F0031C29D51A1B00299512 /* MiniDePin in Frameworks */ = {isa = PBXBuildFile; productRef = 08F0031B29D51A1B00299512 /* MiniDePin */; };
 		08F7DDA2296E58A30097FC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDA1296E58A30097FC9C /* AppDelegate.swift */; };
 		08F7DDA4296E58A30097FC9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDA3296E58A30097FC9C /* SceneDelegate.swift */; };
 		08F7DDA6296E58A30097FC9C /* NearbySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDA5296E58A30097FC9C /* NearbySearchViewController.swift */; };
@@ -82,9 +81,7 @@
 		0825A13B2A0B2542006576A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NearbySearchResultsView.xib; sourceTree = "<group>"; };
 		0825A13D2A0B260D006576A2 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
 		0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPITests.swift; sourceTree = "<group>"; };
-		0858B12A2A195FAA00B05E58 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		086193372A194EE500632E73 /* RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTests.swift; sourceTree = "<group>"; };
-		087ADDC129D524E6006C54C4 /* URLSessionNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetwork.swift; sourceTree = "<group>"; };
 		087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySearchResultsViewController.swift; sourceTree = "<group>"; };
 		087ADDC829D66214006C54C4 /* RestaurantsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListController.swift; sourceTree = "<group>"; };
 		087DC5C82974D0480010CA6D /* NearbySearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySearchController.swift; sourceTree = "<group>"; };
@@ -92,7 +89,6 @@
 		087DC5CC2974D1F00010CA6D /* RestaurantPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPersistence.swift; sourceTree = "<group>"; };
 		087DC5CE2974DBC70010CA6D /* GoogleAPI+NearbySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleAPI+NearbySearch.swift"; sourceTree = "<group>"; };
 		087DC5D92974E3940010CA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NearbySearchView.xib; sourceTree = "<group>"; };
-		08A788D8297558BB00C0DAF3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		08A788DB2975D52800C0DAF3 /* GoogleAPI+NearbySearchPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleAPI+NearbySearchPayload.swift"; sourceTree = "<group>"; };
 		08C0C51B29D7B915002CB290 /* RestaurantsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListViewController.swift; sourceTree = "<group>"; };
 		08C0C52029D7BA1B002CB290 /* RestaurantsMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsMapViewController.swift; sourceTree = "<group>"; };
@@ -122,9 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08F0031C29D51A1B00299512 /* MiniDePin in Frameworks */,
+				0830DCE82A23CE2D00E4DE38 /* MiniDePin in Frameworks */,
 				08FE2B442A15EA8E0064E758 /* SwiftUX in Frameworks */,
+				0830DCEA2A2432CF00E4DE38 /* NetworkDependency in Frameworks */,
 				08FE2B472A15EE060064E758 /* SwiftCache in Frameworks */,
+				0830DCE62A23CE2D00E4DE38 /* LocationDependency in Frameworks */,
 				08FE2B4A2A169A400064E758 /* Iutilitis in Frameworks */,
 				08C0C52529DD06AE002CB290 /* AutoLayoutHelpers in Frameworks */,
 				08C0C52829DD0B29002CB290 /* StronglyTypedID in Frameworks */,
@@ -212,11 +210,8 @@
 		087DC5D12974E2710010CA6D /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				0858B12A2A195FAA00B05E58 /* LocationManager.swift */,
-				08A788D8297558BB00C0DAF3 /* Network.swift */,
 				08CCA2BB29FF4322002FF774 /* PhotoCache.swift */,
 				087DC5CC2974D1F00010CA6D /* RestaurantPersistence.swift */,
-				087ADDC129D524E6006C54C4 /* URLSessionNetwork.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -260,13 +255,6 @@
 			path = "Restaurants Map Display";
 			sourceTree = "<group>";
 		};
-		08F0031829D5193400299512 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		08F0031D29D51A6200299512 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +265,6 @@
 		08F7DD95296E58A30097FC9C = {
 			isa = PBXGroup;
 			children = (
-				08F0031829D5193400299512 /* Packages */,
 				08F7DDA0296E58A30097FC9C /* LunchQuest */,
 				08F7DDB7296E58A40097FC9C /* LunchQuestTests */,
 				08F7DDC1296E58A40097FC9C /* LunchQuestUITests */,
@@ -350,12 +337,14 @@
 			);
 			name = LunchQuest;
 			packageProductDependencies = (
-				08F0031B29D51A1B00299512 /* MiniDePin */,
 				08C0C52429DD06AE002CB290 /* AutoLayoutHelpers */,
 				08C0C52729DD0B29002CB290 /* StronglyTypedID */,
 				08FE2B432A15EA8E0064E758 /* SwiftUX */,
 				08FE2B462A15EE060064E758 /* SwiftCache */,
 				08FE2B492A169A400064E758 /* Iutilitis */,
+				0830DCE52A23CE2D00E4DE38 /* LocationDependency */,
+				0830DCE72A23CE2D00E4DE38 /* MiniDePin */,
+				0830DCE92A2432CF00E4DE38 /* NetworkDependency */,
 			);
 			productName = LunchQuest;
 			productReference = 08F7DD9E296E58A30097FC9C /* LunchQuest.app */;
@@ -430,12 +419,12 @@
 			);
 			mainGroup = 08F7DD95296E58A30097FC9C;
 			packageReferences = (
-				08F0031A29D51A1B00299512 /* XCRemoteSwiftPackageReference "MiniDepIn" */,
 				08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */,
 				08C0C52629DD0B29002CB290 /* XCRemoteSwiftPackageReference "StronglyTypedID" */,
 				08FE2B422A15EA8E0064E758 /* XCRemoteSwiftPackageReference "SwiftUX" */,
 				08FE2B452A15EE060064E758 /* XCRemoteSwiftPackageReference "SwiftCache" */,
 				08FE2B482A169A400064E758 /* XCRemoteSwiftPackageReference "Iutilitis" */,
+				0830DCE42A23CE2D00E4DE38 /* XCRemoteSwiftPackageReference "MiniDepIn" */,
 			);
 			productRefGroup = 08F7DD9F296E58A30097FC9C /* Products */;
 			projectDirPath = "";
@@ -489,7 +478,6 @@
 				0825A1352A0B252F006576A2 /* RestaurantDetailsViewController.swift in Sources */,
 				08C0C52B29DD0D90002CB290 /* RestaurantListCell.swift in Sources */,
 				08F7DDA6296E58A30097FC9C /* NearbySearchViewController.swift in Sources */,
-				0858B12B2A195FAA00B05E58 /* LocationManager.swift in Sources */,
 				08CD94DE2A087C3D00AADE17 /* RestaurantSearchResultsController.swift in Sources */,
 				08F7DDA2296E58A30097FC9C /* AppDelegate.swift in Sources */,
 				08C0C51D29D7B915002CB290 /* RestaurantsListViewController.swift in Sources */,
@@ -497,12 +485,10 @@
 				08F7DDA4296E58A30097FC9C /* SceneDelegate.swift in Sources */,
 				0817FBA92A05CA7E00986334 /* GoogleAPI.swift in Sources */,
 				0825A1312A09FBC3006576A2 /* GoogleAPI+NearbySearchLocation.swift in Sources */,
-				087ADDC229D524E6006C54C4 /* URLSessionNetwork.swift in Sources */,
 				087ADDC929D66214006C54C4 /* RestaurantsListController.swift in Sources */,
 				087ADDC629D661BB006C54C4 /* NearbySearchResultsViewController.swift in Sources */,
 				08CCA2BA29FDF5AA002FF774 /* GoogleAPI+PlacePhoto.swift in Sources */,
 				08CCA2B829FDF44A002FF774 /* Photo.swift in Sources */,
-				08A788D9297558BB00C0DAF3 /* Network.swift in Sources */,
 				08C0C52129D7BA1B002CB290 /* RestaurantsMapViewController.swift in Sources */,
 				087DC5CF2974DBC70010CA6D /* GoogleAPI+NearbySearch.swift in Sources */,
 				08CCA2BC29FF4322002FF774 /* PhotoCache.swift in Sources */,
@@ -878,6 +864,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0830DCE42A23CE2D00E4DE38 /* XCRemoteSwiftPackageReference "MiniDepIn" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gabardone/MiniDepIn.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 		08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/AutolayoutHelpers";
@@ -889,14 +883,6 @@
 		08C0C52629DD0B29002CB290 /* XCRemoteSwiftPackageReference "StronglyTypedID" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/StronglyTypedID";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		08F0031A29D51A1B00299512 /* XCRemoteSwiftPackageReference "MiniDepIn" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Gabardone/MiniDepIn";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -929,6 +915,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0830DCE52A23CE2D00E4DE38 /* LocationDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830DCE42A23CE2D00E4DE38 /* XCRemoteSwiftPackageReference "MiniDepIn" */;
+			productName = LocationDependency;
+		};
+		0830DCE72A23CE2D00E4DE38 /* MiniDePin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830DCE42A23CE2D00E4DE38 /* XCRemoteSwiftPackageReference "MiniDepIn" */;
+			productName = MiniDePin;
+		};
+		0830DCE92A2432CF00E4DE38 /* NetworkDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830DCE42A23CE2D00E4DE38 /* XCRemoteSwiftPackageReference "MiniDepIn" */;
+			productName = NetworkDependency;
+		};
 		08C0C52429DD06AE002CB290 /* AutoLayoutHelpers */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */;
@@ -938,11 +939,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08C0C52629DD0B29002CB290 /* XCRemoteSwiftPackageReference "StronglyTypedID" */;
 			productName = StronglyTypedID;
-		};
-		08F0031B29D51A1B00299512 /* MiniDePin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08F0031A29D51A1B00299512 /* XCRemoteSwiftPackageReference "MiniDepIn" */;
-			productName = MiniDePin;
 		};
 		08FE2B432A15EA8E0064E758 /* SwiftUX */ = {
 			isa = XCSwiftPackageProductDependency;

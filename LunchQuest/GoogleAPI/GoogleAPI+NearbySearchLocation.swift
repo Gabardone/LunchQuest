@@ -23,7 +23,7 @@ extension GoogleAPI.NearbySearch {
             // Present user UI.
             let _: Void = await withCheckedContinuation { continuation in
                 var subscription: AnyCancellable?
-                subscription = dependencies.locationManager.authorizationStatus.updates.sink { authStatus in
+                subscription = dependencies.locationManager.authorizationStatus.updates.sink { _ in
                     subscription?.cancel()
                     continuation.resume()
                 }
@@ -35,7 +35,9 @@ extension GoogleAPI.NearbySearch {
 
         case .denied, .restricted:
             // Seeing weird behavior with custom error types so throwing an NSError instead. Needs further research.
-            let localizedDescription = errorMessageForCLAuthStatus(authStatus: locationManager.authorizationStatus.value)
+            let localizedDescription = errorMessageForCLAuthStatus(
+                authStatus: locationManager.authorizationStatus.value
+            )
             throw NSError(
                 domain: GoogleAPI.ErrorDomain,
                 code: 7777,
@@ -44,7 +46,9 @@ extension GoogleAPI.NearbySearch {
 
         @unknown default:
             // Seeing weird behavior with custom error types so throwing an NSError instead. Needs further research.
-            let localizedDescription = errorMessageForCLAuthStatus(authStatus: locationManager.authorizationStatus.value)
+            let localizedDescription = errorMessageForCLAuthStatus(
+                authStatus: locationManager.authorizationStatus.value
+            )
             throw NSError(
                 domain: GoogleAPI.ErrorDomain,
                 code: 7777,

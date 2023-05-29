@@ -7,7 +7,9 @@
 
 import CoreLocation
 import Foundation
+import LocationDependency
 import MiniDePin
+import NetworkDependency
 
 extension GoogleAPI {
     static let commonNearbySearchComponents: URLComponents = {

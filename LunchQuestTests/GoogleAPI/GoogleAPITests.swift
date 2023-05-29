@@ -12,7 +12,5 @@ import XCTest
  Sanity tests for GoogleAPI logic.
  */
 final class GoogleAPITests: XCTestCase {
-    func testNearbySearchURL() {
-        
-    }
+    func testNearbySearchURL() {}
 }
