@@ -1,0 +1,382 @@
+{
+  "html_attributions": [],
+  "next_page_token": "AZose0nrqs2AX_Ub-6IxbN4AU9M2Zu7HPL9Rg35eGILerr7LKsrkfW4mkeKGH-Edva5oyJTTeUCNdu3KAfnL4gdrDqkPhn1i-Ln2KB72y2Odsn19lOrn1nAOZAwqhgCcXdjcqEPrL98RPhAVm2ZKbDR2qi9u80JfX-AuJkN37pDtA6CVoRFocZcbQ2tItZi7penYj-aeEK0rwDxJ635_4uusF6eKBatmzMAc23GkeEYvvqeWQsYdfqIZGN2EeMm2j03Ph6--gU80M-Wm6QxBmvhOd5v70BiKTmf_F9pDKABxO8R-W8xHKIaCX_tumkXeEnusNObIy1C-VEY1O-XB7ugtT5xZZNWnhptvQ-sviS77Ac7o8U5NcZ-W7Mgj1AGyIP4HLI6PsvcA1cCh8el1ktlI7E0XxgS2-hyjPtZ2yCGQPoK41tgItPpmHi8j-D8-",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.33133169999999,
+          "lng": -122.0318142
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.3326108302915,
+            "lng": -122.0306436197085
+          },
+          "southwest": {
+            "lat": 37.3299128697085,
+            "lng": -122.0333415802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "BJ's Restaurant & Brewhouse",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104506279021249480336\">BJ&#39;s Restaurant &amp; Brewhouse</a>"
+          ],
+          "photo_reference": "AZose0nMT_WHvwt8kQ7KD6igCHevwbuui7pfx9xdNcBkLb_x8Xcqs4UeJtF80CofV8SDqBfHGKFyz6XxCjmYjPY6Fa7lB4c6A-r3covRCbIj7I6nMgxe7oGpEb32r-LIThmNTJAPV7NfQTUt23yyrcotgtFeSxyeLRyTwlduPG09qWDFrIFz",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJM75zpLa1j4ARd8IiWxkW30g",
+      "plus_code": {
+        "compound_code": "8XJ9+G7 Cupertino, CA, USA",
+        "global_code": "849V8XJ9+G7"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJM75zpLa1j4ARd8IiWxkW30g",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "bar",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 2136,
+      "vicinity": "10690 North De Anza Boulevard, Cupertino"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.3234716,
+          "lng": -122.009817
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.3249295802915,
+            "lng": -122.0085338697085
+          },
+          "southwest": {
+            "lat": 37.3222316197085,
+            "lng": -122.0112318302915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Alexander's Steakhouse",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3006,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105938340273423498381\">Emma</a>"
+          ],
+          "photo_reference": "AZose0lQWLRr-eYT3-8xeFbA-mVwmhEgFGlXkCgl1dOMyDtpg1pWN2VbLXRTgey4d1UpUsE8FWfjlpxDIy4OrU1GVIPTEna7Y8qKxx0GpAizfHYvLy0EYC-P-vxoOIpLANlPXoyoGXJbPQA774ML2t9Ay_RmVewYzoK7AGJ5IKQ3UIaK1DSm",
+          "width": 5344
+        }
+      ],
+      "place_id": "ChIJ38II9Ji1j4ARxUTIEfcTGx0",
+      "plus_code": {
+        "compound_code": "8XFR+93 Cupertino, CA, USA",
+        "global_code": "849V8XFR+93"
+      },
+      "price_level": 4,
+      "reference": "ChIJ38II9Ji1j4ARxUTIEfcTGx0",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "19379 Stevens Creek Boulevard, Cupertino"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.3140052,
+          "lng": -122.0317953
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.31541028029149,
+            "lng": -122.0304725197085
+          },
+          "southwest": {
+            "lat": 37.3127123197085,
+            "lng": -122.0331704802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Aqui Cupertino",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 670,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100797951734263868256\">Aqui Cupertino</a>"
+          ],
+          "photo_reference": "AZose0mj4Rp9OrHqPXeMvHNo1OBIXfm3-9qsHObf1KnzMKJTlOShfHDSaPTt50NnLUslKd66UjFkhagIepJgJQl4qiN0UUvEJy3C_qnWlZlBhRaZBpYNsiw7GvFOk394hxtvzWsGA-wtsEip7SPxJhQyLUs_3CqyZ8Iq4XNpS_uHUZmeewGy",
+          "width": 1168
+        }
+      ],
+      "place_id": "ChIJXcisMQe1j4ARtlM0cX8f3bE",
+      "plus_code": {
+        "compound_code": "8X79+J7 Cupertino, CA, USA",
+        "global_code": "849V8X79+J7"
+      },
+      "price_level": 2,
+      "rating": 4.5,
+      "reference": "ChIJXcisMQe1j4ARtlM0cX8f3bE",
+      "scope": "GOOGLE",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1887,
+      "vicinity": "10630 South De Anza Boulevard, Cupertino"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.3678193,
+          "lng": -122.0331358
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.3690903802915,
+            "lng": -122.0317627697085
+          },
+          "southwest": {
+            "lat": 37.36639241970851,
+            "lng": -122.0344607302915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "The Habit Burger Grill",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104861146276467007354\">Mark Yan</a>"
+          ],
+          "photo_reference": "AZose0nBhFRv3AfJ-PiamF3eXfIqVEk0rDjOi-zdIv104-Mj99i8tIFwZVqIPb9DWAkikdxvAEX2ahwpjzDDAXFZYQcOFU0rOFb3Np8pi6a9AnjVCSD7JP2LKGGgUMrYAiHPLQzrWWl6rMcjMQi-1KdkZqhP7wJokVuGp2WcV579m8CA8Z7M",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJWRPB5GO2j4ARMtYHzir7yqY",
+      "plus_code": {
+        "compound_code": "9X98+4P Sunnyvale, CA, USA",
+        "global_code": "849V9X98+4P"
+      },
+      "price_level": 1,
+      "rating": 4.3,
+      "reference": "ChIJWRPB5GO2j4ARMtYHzir7yqY",
+      "scope": "GOOGLE",
+      "types": [
+        "meal_takeaway",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1089,
+      "vicinity": "146 West El Camino Real, Sunnyvale"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.322629,
+          "lng": -122.040961
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.3239886802915,
+            "lng": -122.0395658197085
+          },
+          "southwest": {
+            "lat": 37.3212907197085,
+            "lng": -122.0422637802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Ike's Love & Sandwiches",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104211911329945204392\">Yusuke Kinoshita</a>"
+          ],
+          "photo_reference": "AZose0k-eGKsRmnrHVcq1oasWHkmwtWYR5wc2LAJ59D7Gvc7owUeOvWKYMJMq-LF3WyjqTHklROFLapqk5pa0PpBZSSo5cgkqEi8_4-4VOb1nI1UyhnxDsNGaARAp21G3BN8OWH0F4C7PqMsA3zKOs1A5WcfMkVbEwg8NSPt552TE-zPA23Q",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJyerOgVK0j4ARaLZmYsYjYv0",
+      "plus_code": {
+        "compound_code": "8XF5+3J Cupertino, CA, USA",
+        "global_code": "849V8XF5+3J"
+      },
+      "price_level": 2,
+      "rating": 4.4,
+      "reference": "ChIJyerOgVK0j4ARaLZmYsYjYv0",
+      "scope": "GOOGLE",
+      "types": [
+        "meal_takeaway",
+        "meal_delivery",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 755,
+      "vicinity": "21000 Stevens Creek Boulevard Ste 100, Cupertino"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.3677565,
+          "lng": -122.036154
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.36916398029151,
+            "lng": -122.0349487197085
+          },
+          "southwest": {
+            "lat": 37.36646601970851,
+            "lng": -122.0376466802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Chipotle Mexican Grill",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2850,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110171932238566208341\">Keith Achorn</a>"
+          ],
+          "photo_reference": "AZose0noxZLNUouHBQgnEF9zjrpWLoZHOzrVR2p987PqYjl3qJWxEThXfwCgol1Xrx0aCPO_opmKKxkTup6kNGhp-EIIA_AYp3RVaEi8DnzvJzjoGBH3v_g0RVXU2LqRJ25LPDSzsIgOxs7UuL4M6DuxDtPKr4weog24dselehnQkvIfPin4",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJhcz0dGG2j4ARqVruEiQRWnU",
+      "plus_code": {
+        "compound_code": "9X97+4G Sunnyvale, CA, USA",
+        "global_code": "849V9X97+4G"
+      },
+      "price_level": 1,
+      "rating": 3.2,
+      "reference": "ChIJhcz0dGG2j4ARqVruEiQRWnU",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1120,
+      "vicinity": "324 West El Camino Real B-3, Sunnyvale"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 37.336347,
+          "lng": -121.994157
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 37.33776823029149,
+            "lng": -121.9928021197085
+          },
+          "southwest": {
+            "lat": 37.3350702697085,
+            "lng": -121.9955000802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "icon_background_color": "#FF9E67",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+      "name": "Orenchi Ramen",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/113872001586835608062\">Daniel Teixeira-Gomes</a>"
+          ],
+          "photo_reference": "AZose0mrL5Uj1ube2-x4QMuUCEsTNaRLQky2N6bMnEtNro5aQb2bzi2pNWZqzKN0zEYL-xgbaJjFmKLo7vEd6J6XGCT8-cMGxtQyM1LCa2K44drDoZ33eHAG5nzVcHlKJtzejNZp_yQ87Yji5xwvuuO7MaJ2nFv9LBKdV_eXudf91FktE6SB",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJX_7Uaoi1j4ARjlLl0tgTL20",
+      "plus_code": {
+        "compound_code": "82P4+G8 Santa Clara, CA, USA",
+        "global_code": "849W82P4+G8"
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJX_7Uaoi1j4ARjlLl0tgTL20",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1674,
+      "vicinity": "3540 Homestead Road, Santa Clara"
+    }
+  ],
+  "status": "OK"
+}

@@ -91,7 +91,7 @@ extension GoogleAPI {
 
         var geometry: Geometry?
 
-        var userRatingsTotal: Int
+        var userRatingsTotal: Int?
 
         var vicinity: String?
 

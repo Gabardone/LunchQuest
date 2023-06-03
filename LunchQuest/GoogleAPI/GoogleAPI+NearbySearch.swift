@@ -70,7 +70,7 @@ extension GoogleAPI.NearbySearch {
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         let jsonPayload = try jsonDecoder.decode(GoogleAPI.PlacesNearbySearchResponse.self, from: data)
 
-        guard jsonPayload.status == .ok else {
+        guard jsonPayload.status == .ok || jsonPayload.status == .empty else {
             throw NearbySearchError.unexpectedPayloadStatus(jsonPayload.status)
         }
 
