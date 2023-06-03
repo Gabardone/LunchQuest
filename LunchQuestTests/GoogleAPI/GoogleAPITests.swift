@@ -90,4 +90,18 @@ final class GoogleAPITests: XCTestCase {
 
         XCTAssertEqual(decodedRestaurants.count, 7)
     }
+
+    func testDecodePlacesNearbySearchResponseEmptyResults() throws {
+        guard let jsonURL = Bundle(for: Self.self).url(forResource: "MiddleOfNowhere", withExtension: "json") else {
+            XCTFail("Couldn't load json")
+            return
+        }
+
+        let jsonData = try Data(contentsOf: jsonURL)
+
+        let nearbySearch = GoogleAPI.NearbySearch()
+        let decodedRestaurants = try nearbySearch.decodePlacesNearbySearchResponse(data: jsonData)
+
+        XCTAssertEqual(decodedRestaurants.count, 0)
+    }
 }

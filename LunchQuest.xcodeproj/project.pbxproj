@@ -39,6 +39,7 @@
 		08F5512A2A2B204B00945363 /* LocationDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08F551292A2B204B00945363 /* LocationDependency */; };
 		08F5512C2A2B205600945363 /* NetworkDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08F5512B2A2B205600945363 /* NetworkDependency */; };
 		08F5512E2A2BD3F800945363 /* Cupertino.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F5512D2A2BD3F800945363 /* Cupertino.json */; };
+		08F551302A2BE2E100945363 /* MiddleOfNowhere.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F5512F2A2BE2E100945363 /* MiddleOfNowhere.json */; };
 		08F7DDA2296E58A30097FC9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDA1296E58A30097FC9C /* AppDelegate.swift */; };
 		08F7DDA4296E58A30097FC9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDA3296E58A30097FC9C /* SceneDelegate.swift */; };
 		08F7DDA6296E58A30097FC9C /* NearbySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDA5296E58A30097FC9C /* NearbySearchViewController.swift */; };
@@ -98,6 +99,7 @@
 		08CD94DD2A087C3D00AADE17 /* RestaurantSearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchResultsController.swift; sourceTree = "<group>"; };
 		08CD94E12A08884E00AADE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RestaurantsMapView.xib; sourceTree = "<group>"; };
 		08F5512D2A2BD3F800945363 /* Cupertino.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cupertino.json; sourceTree = "<group>"; };
+		08F5512F2A2BE2E100945363 /* MiddleOfNowhere.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MiddleOfNowhere.json; sourceTree = "<group>"; };
 		08F7DD9E296E58A30097FC9C /* LunchQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F7DDA1296E58A30097FC9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08F7DDA3296E58A30097FC9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				08F5512D2A2BD3F800945363 /* Cupertino.json */,
+				08F5512F2A2BE2E100945363 /* MiddleOfNowhere.json */,
 				0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */,
 			);
 			path = GoogleAPI;
@@ -462,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F551302A2BE2E100945363 /* MiddleOfNowhere.json in Resources */,
 				08F5512E2A2BD3F800945363 /* Cupertino.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
