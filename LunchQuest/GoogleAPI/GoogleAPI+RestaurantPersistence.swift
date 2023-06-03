@@ -7,16 +7,17 @@
 
 import CoreLocation
 import Foundation
+import LocationDependency
 
 extension GoogleAPI.NearbySearch: RestaurantPersistence {
     func fetchNearbyRestaurants(searchTerms: String?) async throws -> RestaurantSearchResults {
         GoogleAPI.logger.info("Fetch nearby restaurants: Starting process")
 
-        try await verifyUserPermissionToAccessLocation()
+        try await dependencies.locationManager.verifyUserPermissionToAccessLocation()
 
         GoogleAPI.logger.info("Fetch nearby restaurants: Obtained permission to access location")
 
-        let currentLocation = try await obtainCurrentLocation()
+        let currentLocation = try await dependencies.locationManager.obtainCurrentLocation()
 
         GoogleAPI.logger.info("Fetch nearby restaurants: Obtained current location = \(currentLocation)")
 

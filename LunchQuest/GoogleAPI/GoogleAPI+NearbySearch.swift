@@ -40,8 +40,9 @@ extension GoogleAPI {
 // MARK: - Google API Calls
 
 extension GoogleAPI.NearbySearch {
-    enum PayloadError: Error {
-        case unexpectedStatus(GoogleAPI.PlacesSearchStatus)
+    enum NearbySearchError: Error {
+        case unexpectedPayloadStatus(GoogleAPI.PlacesSearchStatus)
+        case invalidURLComponents(URLComponents)
     }
 
     func performNearbyPlaceAPICall(location: CLLocation, searchTerms: String?) async throws -> Data {
@@ -58,7 +59,7 @@ extension GoogleAPI.NearbySearch {
         }
 
         guard let apiCallURL = urlComponents.url else {
-            fatalError("How the $%^&* did we manage to screw this one.")
+            throw NearbySearchError.invalidURLComponents(urlComponents)
         }
 
         return try await dependencies.network.dataTask(url: apiCallURL).value
@@ -70,7 +71,7 @@ extension GoogleAPI.NearbySearch {
         let jsonPayload = try jsonDecoder.decode(GoogleAPI.PlacesNearbySearchResponse.self, from: data)
 
         guard jsonPayload.status == .ok else {
-            throw PayloadError.unexpectedStatus(jsonPayload.status)
+            throw NearbySearchError.unexpectedPayloadStatus(jsonPayload.status)
         }
 
         return jsonPayload.results.compactMap { jsonRestaurant in
