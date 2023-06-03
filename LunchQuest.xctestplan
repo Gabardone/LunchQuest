@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "E2A09DF1-9CA5-4D8D-BADB-306D64E4F03D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:LunchQuest.xcodeproj",
+      "identifier" : "08F7DD9D296E58A30097FC9C",
+      "name" : "LunchQuest"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:LunchQuest.xcodeproj",
+        "identifier" : "08F7DDB3296E58A40097FC9C",
+        "name" : "LunchQuestTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:LunchQuest.xcodeproj",
+        "identifier" : "08F7DDBD296E58A40097FC9C",
+        "name" : "LunchQuestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
