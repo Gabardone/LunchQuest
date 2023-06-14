@@ -104,4 +104,23 @@ final class GoogleAPITests: XCTestCase {
 
         XCTAssertEqual(decodedRestaurants.count, 0)
     }
+
+    func testDecodePlacesNearbySearchResponseBadResults() throws {
+        guard let jsonURL = Bundle(for: Self.self).url(forResource: "BadCallSon", withExtension: "json") else {
+            XCTFail("Couldn't load json")
+            return
+        }
+
+        let jsonData = try Data(contentsOf: jsonURL)
+
+        let nearbySearch = GoogleAPI.NearbySearch()
+        do {
+            let decodedRestaurants = try nearbySearch.decodePlacesNearbySearchResponse(data: jsonData)
+            XCTFail("Unexpectedly completed without error. Result = \(decodedRestaurants)")
+        } catch let GoogleAPI.NearbySearch.NearbySearchError.unexpectedPayloadStatus(status) {
+            XCTAssertEqual(status, .invalidRequest)
+        } catch {
+            XCTFail("Unexpected error thrown")
+        }
+    }
 }
