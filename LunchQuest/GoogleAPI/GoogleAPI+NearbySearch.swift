@@ -8,7 +8,6 @@
 import CoreLocation
 import Foundation
 import LocationDependency
-import MiniDePin
 import NetworkDependency
 
 extension GoogleAPI {
@@ -33,7 +32,7 @@ extension GoogleAPI {
 
         // MARK: - Stored Properties
 
-        let dependencies: NetworkDependency & LocationDependency
+        let dependencies: any NetworkDependency & LocationDependency
     }
 }
 

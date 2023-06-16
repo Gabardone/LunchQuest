@@ -6,9 +6,10 @@
 //
 
 import AutoLayoutHelpers
+import GlobalDependencies
 import Iutilitis
-import MiniDePin
 import SwiftUX
+import UIComponents
 import UIKit
 
 class RestaurantDetailsViewController: UIComponent<RestaurantController> {

@@ -7,10 +7,10 @@
 
 import AutoLayoutHelpers
 import Combine
+import GlobalDependencies
 import Iutilitis
-import MiniDePin
 import os
-import SwiftUX
+import UIComponents
 import UIKit
 
 class NearbySearchViewController: ContainerUIComponent<NearbySearchController> {

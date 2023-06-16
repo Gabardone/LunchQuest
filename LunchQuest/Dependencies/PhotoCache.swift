@@ -5,7 +5,7 @@
 //  Created by Óscar Morales Vivó on 4/30/23.
 //
 
-import MiniDePin
+import GlobalDependencies
 import os
 import SwiftCache
 import UIKit

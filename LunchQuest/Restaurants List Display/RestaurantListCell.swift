@@ -6,8 +6,8 @@
 //
 
 import AutoLayoutHelpers
+import GlobalDependencies
 import Iutilitis
-import MiniDePin
 import UIKit
 
 class RestaurantListCell: UICollectionViewListCell {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import MiniDePin
+import GlobalDependencies
 
 /**
  Declares the behaviors that we require to obtain information about nearby restaurants.

@@ -6,7 +6,7 @@
 //
 
 import AutoLayoutHelpers
-import SwiftUX
+import UIComponents
 import UIKit
 
 class NearbySearchResultsViewController: ContainerUIComponent<RestaurantSearchResultsController> {

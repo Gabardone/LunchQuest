@@ -15,6 +15,7 @@
 		0825A1372A0B2536006576A2 /* RestaurantDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A1392A0B2536006576A2 /* RestaurantDetailsView.xib */; };
 		0825A13A2A0B2542006576A2 /* NearbySearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A13C2A0B2542006576A2 /* NearbySearchResultsView.xib */; };
 		0825A13E2A0B260D006576A2 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A13D2A0B260D006576A2 /* RestaurantController.swift */; };
+		08425D6E2A3C37C7005AA35C /* LocationDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08425D6D2A3C37C7005AA35C /* LocationDependency */; };
 		0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */; };
 		086193382A194EE500632E73 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086193372A194EE500632E73 /* RestaurantTests.swift */; };
 		087ADDC629D661BB006C54C4 /* NearbySearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */; };
@@ -24,6 +25,9 @@
 		087DC5CD2974D1F00010CA6D /* RestaurantPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC5CC2974D1F00010CA6D /* RestaurantPersistence.swift */; };
 		087DC5CF2974DBC70010CA6D /* GoogleAPI+NearbySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DC5CE2974DBC70010CA6D /* GoogleAPI+NearbySearch.swift */; };
 		087DC5D82974E3940010CA6D /* NearbySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087DC5DA2974E3940010CA6D /* NearbySearchView.xib */; };
+		08A100622A3C340C00C67568 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 08A100612A3C340C00C67568 /* UIComponents */; };
+		08A100652A3C346200C67568 /* GlobalDependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 08A100642A3C346200C67568 /* GlobalDependencies */; };
+		08A100682A3C354F00C67568 /* NetworkDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08A100672A3C354F00C67568 /* NetworkDependency */; };
 		08A788DC2975D52800C0DAF3 /* GoogleAPI+NearbySearchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A788DB2975D52800C0DAF3 /* GoogleAPI+NearbySearchPayload.swift */; };
 		08C0C51D29D7B915002CB290 /* RestaurantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0C51B29D7B915002CB290 /* RestaurantsListViewController.swift */; };
 		08C0C52129D7BA1B002CB290 /* RestaurantsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0C52029D7BA1B002CB290 /* RestaurantsMapViewController.swift */; };
@@ -36,8 +40,6 @@
 		08CD94DC2A08796500AADE17 /* RestaurantSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD94DB2A08796500AADE17 /* RestaurantSearchResults.swift */; };
 		08CD94DE2A087C3D00AADE17 /* RestaurantSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD94DD2A087C3D00AADE17 /* RestaurantSearchResultsController.swift */; };
 		08CD94E02A08884E00AADE17 /* RestaurantsMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08CD94E22A08884E00AADE17 /* RestaurantsMapView.xib */; };
-		08F5512A2A2B204B00945363 /* LocationDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08F551292A2B204B00945363 /* LocationDependency */; };
-		08F5512C2A2B205600945363 /* NetworkDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08F5512B2A2B205600945363 /* NetworkDependency */; };
 		08F5512E2A2BD3F800945363 /* Cupertino.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F5512D2A2BD3F800945363 /* Cupertino.json */; };
 		08F551302A2BE2E100945363 /* MiddleOfNowhere.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F5512F2A2BE2E100945363 /* MiddleOfNowhere.json */; };
 		08F551322A2BE59100945363 /* BadCallSon.json in Resources */ = {isa = PBXBuildFile; fileRef = 08F551312A2BE59100945363 /* BadCallSon.json */; };
@@ -121,13 +123,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08F5512C2A2B205600945363 /* NetworkDependency in Frameworks */,
+				08A100622A3C340C00C67568 /* UIComponents in Frameworks */,
 				08FE2B442A15EA8E0064E758 /* SwiftUX in Frameworks */,
+				08425D6E2A3C37C7005AA35C /* LocationDependency in Frameworks */,
+				08A100682A3C354F00C67568 /* NetworkDependency in Frameworks */,
 				08FE2B472A15EE060064E758 /* SwiftCache in Frameworks */,
-				08F5512A2A2B204B00945363 /* LocationDependency in Frameworks */,
 				08FE2B4A2A169A400064E758 /* Iutilitis in Frameworks */,
 				08C0C52529DD06AE002CB290 /* AutoLayoutHelpers in Frameworks */,
 				08C0C52829DD0B29002CB290 /* StronglyTypedID in Frameworks */,
+				08A100652A3C346200C67568 /* GlobalDependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +350,10 @@
 				08FE2B432A15EA8E0064E758 /* SwiftUX */,
 				08FE2B462A15EE060064E758 /* SwiftCache */,
 				08FE2B492A169A400064E758 /* Iutilitis */,
-				08F551292A2B204B00945363 /* LocationDependency */,
-				08F5512B2A2B205600945363 /* NetworkDependency */,
+				08A100612A3C340C00C67568 /* UIComponents */,
+				08A100642A3C346200C67568 /* GlobalDependencies */,
+				08A100672A3C354F00C67568 /* NetworkDependency */,
+				08425D6D2A3C37C7005AA35C /* LocationDependency */,
 			);
 			productName = LunchQuest;
 			productReference = 08F7DD9E296E58A30097FC9C /* LunchQuest.app */;
@@ -429,7 +435,10 @@
 				08FE2B422A15EA8E0064E758 /* XCRemoteSwiftPackageReference "SwiftUX" */,
 				08FE2B452A15EE060064E758 /* XCRemoteSwiftPackageReference "SwiftCache" */,
 				08FE2B482A169A400064E758 /* XCRemoteSwiftPackageReference "Iutilitis" */,
-				08F551282A2B203500945363 /* XCRemoteSwiftPackageReference "MiniDepIn" */,
+				08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */,
+				08A100602A3C340C00C67568 /* XCRemoteSwiftPackageReference "UIComponents" */,
+				08A100632A3C346200C67568 /* XCRemoteSwiftPackageReference "GlobalDependencies" */,
+				08A100662A3C354F00C67568 /* XCRemoteSwiftPackageReference "NetworkDependency" */,
 			);
 			productRefGroup = 08F7DD9F296E58A30097FC9C /* Products */;
 			projectDirPath = "";
@@ -871,6 +880,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gabardone/LocationDependency.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		08A100602A3C340C00C67568 /* XCRemoteSwiftPackageReference "UIComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gabardone/UIComponents";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		08A100632A3C346200C67568 /* XCRemoteSwiftPackageReference "GlobalDependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gabardone/GlobalDependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		08A100662A3C354F00C67568 /* XCRemoteSwiftPackageReference "NetworkDependency" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gabardone/NetworkDependency";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/AutolayoutHelpers";
@@ -887,20 +928,12 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		08F551282A2B203500945363 /* XCRemoteSwiftPackageReference "MiniDepIn" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Gabardone/MiniDepIn.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.1;
-			};
-		};
 		08FE2B422A15EA8E0064E758 /* XCRemoteSwiftPackageReference "SwiftUX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/SwiftUX.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "0.0.1-alpha";
+				minimumVersion = 1.0.0;
 			};
 		};
 		08FE2B452A15EE060064E758 /* XCRemoteSwiftPackageReference "SwiftCache" */ = {
@@ -922,6 +955,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		08425D6D2A3C37C7005AA35C /* LocationDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */;
+			productName = LocationDependency;
+		};
+		08A100612A3C340C00C67568 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08A100602A3C340C00C67568 /* XCRemoteSwiftPackageReference "UIComponents" */;
+			productName = UIComponents;
+		};
+		08A100642A3C346200C67568 /* GlobalDependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08A100632A3C346200C67568 /* XCRemoteSwiftPackageReference "GlobalDependencies" */;
+			productName = GlobalDependencies;
+		};
+		08A100672A3C354F00C67568 /* NetworkDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08A100662A3C354F00C67568 /* XCRemoteSwiftPackageReference "NetworkDependency" */;
+			productName = NetworkDependency;
+		};
 		08C0C52429DD06AE002CB290 /* AutoLayoutHelpers */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */;
@@ -931,16 +984,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08C0C52629DD0B29002CB290 /* XCRemoteSwiftPackageReference "StronglyTypedID" */;
 			productName = StronglyTypedID;
-		};
-		08F551292A2B204B00945363 /* LocationDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08F551282A2B203500945363 /* XCRemoteSwiftPackageReference "MiniDepIn" */;
-			productName = LocationDependency;
-		};
-		08F5512B2A2B205600945363 /* NetworkDependency */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08F551282A2B203500945363 /* XCRemoteSwiftPackageReference "MiniDepIn" */;
-			productName = NetworkDependency;
 		};
 		08FE2B432A15EA8E0064E758 /* SwiftUX */ = {
 			isa = XCSwiftPackageProductDependency;

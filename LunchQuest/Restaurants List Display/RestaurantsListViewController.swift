@@ -5,7 +5,7 @@
 //  Created by Óscar Morales Vivó on 3/31/23.
 //
 
-import SwiftUX
+import UIComponents
 import UIKit
 
 class RestaurantsListViewController: UIComponent<RestaurantsListController> {

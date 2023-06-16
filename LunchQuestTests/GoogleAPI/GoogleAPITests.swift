@@ -7,7 +7,6 @@
 
 import CoreLocation
 @testable import LunchQuest
-import MiniDePin
 import NetworkDependency
 import XCTest
 

@@ -6,7 +6,7 @@
 //
 
 import MapKit
-import SwiftUX
+import UIComponents
 import UIKit
 
 class RestaurantsMapViewController: UIComponent<RestaurantSearchResultsController> {

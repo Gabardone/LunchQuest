@@ -5,8 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/AutolayoutHelpers",
       "state" : {
-        "revision" : "26797e09f404cbdb34c1b7c3d809c90ad0c09356",
-        "version" : "1.1.2"
+        "revision" : "579af9fcc2744ae786e150847cc4eec506cdf903",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "globaldependencies",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/GlobalDependencies",
+      "state" : {
+        "revision" : "dca8fb31eb9d6efc42b454aa4a5ea812d7d74c23",
+        "version" : "2.0.0"
       }
     },
     {
@@ -18,12 +27,21 @@
       }
     },
     {
-      "identity" : "minidepin",
+      "identity" : "locationdependency",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Gabardone/MiniDepIn.git",
+      "location" : "https://github.com/Gabardone/LocationDependency.git",
       "state" : {
-        "revision" : "80caeb6dfd060be783eecf23c0237606e225c393",
-        "version" : "1.3.1"
+        "revision" : "def4d6e0216463f71d285a2469ac85d1661ff639",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "networkdependency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/NetworkDependency",
+      "state" : {
+        "revision" : "6bf5e3f9db4bb82990e4c45b71ff0711d06b90af",
+        "version" : "1.0.1"
       }
     },
     {
@@ -49,8 +67,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/SwiftUX.git",
       "state" : {
-        "revision" : "b5f0e82ba23a2815d3fba6097348d57d107aac12",
-        "version" : "0.0.2-alpha"
+        "revision" : "f3c0126f2a19d1d1bb5d9412407d35dd372b0a2a",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "uicomponents",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/UIComponents",
+      "state" : {
+        "revision" : "2a88582cd030840d00cef5607ec7c70996134283",
+        "version" : "1.0.0"
       }
     }
   ],
