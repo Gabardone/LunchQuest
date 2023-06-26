@@ -15,6 +15,7 @@
 		0825A1372A0B2536006576A2 /* RestaurantDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A1392A0B2536006576A2 /* RestaurantDetailsView.xib */; };
 		0825A13A2A0B2542006576A2 /* NearbySearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A13C2A0B2542006576A2 /* NearbySearchResultsView.xib */; };
 		0825A13E2A0B260D006576A2 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A13D2A0B260D006576A2 /* RestaurantController.swift */; };
+		0831DC332A49637A003C3FB3 /* SwiftCache in Frameworks */ = {isa = PBXBuildFile; productRef = 0831DC322A49637A003C3FB3 /* SwiftCache */; };
 		08425D6E2A3C37C7005AA35C /* LocationDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08425D6D2A3C37C7005AA35C /* LocationDependency */; };
 		0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */; };
 		086193382A194EE500632E73 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086193372A194EE500632E73 /* RestaurantTests.swift */; };
@@ -52,7 +53,6 @@
 		08F7DDC5296E58A40097FC9C /* LunchQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDC4296E58A40097FC9C /* LunchQuestUITestsLaunchTests.swift */; };
 		08F7DDD52970932F0097FC9C /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7DDD42970932F0097FC9C /* LoadState.swift */; };
 		08FE2B442A15EA8E0064E758 /* SwiftUX in Frameworks */ = {isa = PBXBuildFile; productRef = 08FE2B432A15EA8E0064E758 /* SwiftUX */; };
-		08FE2B472A15EE060064E758 /* SwiftCache in Frameworks */ = {isa = PBXBuildFile; productRef = 08FE2B462A15EE060064E758 /* SwiftCache */; };
 		08FE2B4A2A169A400064E758 /* Iutilitis in Frameworks */ = {isa = PBXBuildFile; productRef = 08FE2B492A169A400064E758 /* Iutilitis */; };
 /* End PBXBuildFile section */
 
@@ -127,9 +127,9 @@
 				08FE2B442A15EA8E0064E758 /* SwiftUX in Frameworks */,
 				08425D6E2A3C37C7005AA35C /* LocationDependency in Frameworks */,
 				08A100682A3C354F00C67568 /* NetworkDependency in Frameworks */,
-				08FE2B472A15EE060064E758 /* SwiftCache in Frameworks */,
 				08FE2B4A2A169A400064E758 /* Iutilitis in Frameworks */,
 				08C0C52529DD06AE002CB290 /* AutoLayoutHelpers in Frameworks */,
+				0831DC332A49637A003C3FB3 /* SwiftCache in Frameworks */,
 				08C0C52829DD0B29002CB290 /* StronglyTypedID in Frameworks */,
 				08A100652A3C346200C67568 /* GlobalDependencies in Frameworks */,
 			);
@@ -348,12 +348,12 @@
 				08C0C52429DD06AE002CB290 /* AutoLayoutHelpers */,
 				08C0C52729DD0B29002CB290 /* StronglyTypedID */,
 				08FE2B432A15EA8E0064E758 /* SwiftUX */,
-				08FE2B462A15EE060064E758 /* SwiftCache */,
 				08FE2B492A169A400064E758 /* Iutilitis */,
 				08A100612A3C340C00C67568 /* UIComponents */,
 				08A100642A3C346200C67568 /* GlobalDependencies */,
 				08A100672A3C354F00C67568 /* NetworkDependency */,
 				08425D6D2A3C37C7005AA35C /* LocationDependency */,
+				0831DC322A49637A003C3FB3 /* SwiftCache */,
 			);
 			productName = LunchQuest;
 			productReference = 08F7DD9E296E58A30097FC9C /* LunchQuest.app */;
@@ -433,12 +433,12 @@
 				08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */,
 				08C0C52629DD0B29002CB290 /* XCRemoteSwiftPackageReference "StronglyTypedID" */,
 				08FE2B422A15EA8E0064E758 /* XCRemoteSwiftPackageReference "SwiftUX" */,
-				08FE2B452A15EE060064E758 /* XCRemoteSwiftPackageReference "SwiftCache" */,
 				08FE2B482A169A400064E758 /* XCRemoteSwiftPackageReference "Iutilitis" */,
 				08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */,
 				08A100602A3C340C00C67568 /* XCRemoteSwiftPackageReference "UIComponents" */,
 				08A100632A3C346200C67568 /* XCRemoteSwiftPackageReference "GlobalDependencies" */,
 				08A100662A3C354F00C67568 /* XCRemoteSwiftPackageReference "NetworkDependency" */,
+				0831DC312A49637A003C3FB3 /* XCRemoteSwiftPackageReference "SwiftCache" */,
 			);
 			productRefGroup = 08F7DD9F296E58A30097FC9C /* Products */;
 			projectDirPath = "";
@@ -880,6 +880,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0831DC312A49637A003C3FB3 /* XCRemoteSwiftPackageReference "SwiftCache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Gabardone/SwiftCache.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/LocationDependency.git";
@@ -909,7 +917,7 @@
 			repositoryURL = "https://github.com/Gabardone/NetworkDependency";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */ = {
@@ -936,14 +944,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		08FE2B452A15EE060064E758 /* XCRemoteSwiftPackageReference "SwiftCache" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Gabardone/SwiftCache.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = "0.0.1-alpha";
-			};
-		};
 		08FE2B482A169A400064E758 /* XCRemoteSwiftPackageReference "Iutilitis" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/Iutilitis.git";
@@ -955,6 +955,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0831DC322A49637A003C3FB3 /* SwiftCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0831DC312A49637A003C3FB3 /* XCRemoteSwiftPackageReference "SwiftCache" */;
+			productName = SwiftCache;
+		};
 		08425D6D2A3C37C7005AA35C /* LocationDependency */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */;
@@ -989,11 +994,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08FE2B422A15EA8E0064E758 /* XCRemoteSwiftPackageReference "SwiftUX" */;
 			productName = SwiftUX;
-		};
-		08FE2B462A15EE060064E758 /* SwiftCache */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 08FE2B452A15EE060064E758 /* XCRemoteSwiftPackageReference "SwiftCache" */;
-			productName = SwiftCache;
 		};
 		08FE2B492A169A400064E758 /* Iutilitis */ = {
 			isa = XCSwiftPackageProductDependency;

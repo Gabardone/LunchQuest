@@ -61,7 +61,7 @@ extension GoogleAPI.NearbySearch {
             throw NearbySearchError.invalidURLComponents(urlComponents)
         }
 
-        return try await dependencies.network.dataTask(url: apiCallURL).value
+        return try await dependencies.network.dataFor(url: apiCallURL)
     }
 
     func decodePlacesNearbySearchResponse(data: Data) throws -> [Restaurant] {

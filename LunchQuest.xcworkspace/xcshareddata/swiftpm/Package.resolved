@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "filesystemdependency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/FileSystemDependency.git",
+      "state" : {
+        "revision" : "c29100d521499c57eea3cc4742a32550cbacebbb",
+        "version" : "0.0.3"
+      }
+    },
+    {
       "identity" : "globaldependencies",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/GlobalDependencies",
@@ -40,8 +49,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/NetworkDependency",
       "state" : {
-        "revision" : "6bf5e3f9db4bb82990e4c45b71ff0711d06b90af",
-        "version" : "1.0.1"
+        "revision" : "3d9b7c28594f118b0b61d07842e161c06b8ba906",
+        "version" : "2.0.0"
       }
     },
     {
@@ -58,8 +67,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/SwiftCache.git",
       "state" : {
-        "revision" : "87de63f8ad11fec28f712a0742a554422559a3a0",
-        "version" : "0.0.1-alpha"
+        "revision" : "dfb78a0597a516f624073945667877748c9e05b9",
+        "version" : "2.0.0"
       }
     },
     {

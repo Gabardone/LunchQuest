@@ -18,8 +18,8 @@ extension GoogleAPI {
     /**
      Builds a cache that will get photos from Google's `PlacePhoto` API and store them locally/in memory as needed.
      */
-    static func buildPhotoCache() -> PhotoCache {
-        let networkDataSource = NetworkReadOnlyDataStorage()
+    static func buildPhotoCache(dependencies: GlobalDependencies = .default) -> PhotoCache {
+        let networkDataSource = NetworkDataSource(dependencies: dependencies)
         let networkSource = BackstopStorageCache(
             storage: networkDataSource) { (cacheID: PhotoCacheID) in
                 var urlComponents = GoogleAPI.commonPlacePhotoComponents
@@ -32,26 +32,18 @@ extension GoogleAPI {
                 return urlComponents.url!
             }
 
-        let directoryURL = FileManager.default.temporaryDirectory.appending(
-            path: "PlacePhotoCache", directoryHint: .isDirectory
+        // Build a temp directory and make sure it exists... Temp folder only use of FileManager is testable.
+        let directoryURL: URL = FileManager.default.temporaryDirectory.appending(
+            component: (Bundle.main.bundleIdentifier ?? "") + "PlacePhoto",
+            directoryHint: .isDirectory
         )
-        let localFileDataSource: LocalFileDataStorage
-        do {
-            try localFileDataSource = .init(rootDirectory: directoryURL)
-        } catch {
-            try! localFileDataSource = .init() // swiftlint:disable:this force_try
-        }
+
+        let localFileDataSource = LocalFileDataStorage(dependencies: dependencies)
         let localCache = TemporaryStorageCache(
             next: networkSource,
-            storage: localFileDataSource
-        ) { (cacheID: PhotoCacheID) in
-            // Using the identifier and size as the file name.
-            var result = "\(cacheID.id.rawValue)"
-            if let sizingString = cacheID.maxSize.fileNameString {
-                result += "-" + sizingString
-            }
-            return result
-        }
+            storage: localFileDataSource,
+            rootDirectory: directoryURL
+        )
 
         return TemporaryStorageCache(next: localCache, storage: WeakObjectStorage()) { (data: Data) in
             if let image = UIImage(data: data) {
