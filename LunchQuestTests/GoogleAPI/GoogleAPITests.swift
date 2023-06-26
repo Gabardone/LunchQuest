@@ -122,4 +122,25 @@ final class GoogleAPITests: XCTestCase {
             XCTFail("Unexpected error thrown")
         }
     }
+
+    /// Checks the bare minimum data we need to create a display restaurant for the app.
+    func testIncompleteJSONRestaurants() {
+        let verifyIncompleteJSONPlace = {
+            XCTAssertNil(Restaurant(googleJSON: $0))
+        }
+
+        let name = "Adega"
+        let placeId = "Potato"
+        let geometry = GoogleAPI.Geometry(location: .init(lat: 37.0, lng: -110))
+
+        verifyIncompleteJSONPlace(.init())
+        verifyIncompleteJSONPlace(.init(name: name))
+        verifyIncompleteJSONPlace(.init(placeId: placeId))
+        verifyIncompleteJSONPlace(.init(geometry: geometry))
+        verifyIncompleteJSONPlace(.init(placeId: placeId, name: name))
+        verifyIncompleteJSONPlace(.init(placeId: placeId, geometry: geometry))
+        verifyIncompleteJSONPlace(.init(name: name, geometry: geometry))
+
+        XCTAssertNotNil(Restaurant(googleJSON: GoogleAPI.Place(placeId: placeId, name: name, geometry: geometry)))
+    }
 }
