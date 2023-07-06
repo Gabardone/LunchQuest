@@ -16,6 +16,7 @@
 		0825A13A2A0B2542006576A2 /* NearbySearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0825A13C2A0B2542006576A2 /* NearbySearchResultsView.xib */; };
 		0825A13E2A0B260D006576A2 /* RestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A13D2A0B260D006576A2 /* RestaurantController.swift */; };
 		0831DC332A49637A003C3FB3 /* SwiftCache in Frameworks */ = {isa = PBXBuildFile; productRef = 0831DC322A49637A003C3FB3 /* SwiftCache */; };
+		0831DC362A529157003C3FB3 /* NearbySearchControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831DC352A529157003C3FB3 /* NearbySearchControllerTests.swift */; };
 		08425D6E2A3C37C7005AA35C /* LocationDependency in Frameworks */ = {isa = PBXBuildFile; productRef = 08425D6D2A3C37C7005AA35C /* LocationDependency */; };
 		0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */; };
 		086193382A194EE500632E73 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086193372A194EE500632E73 /* RestaurantTests.swift */; };
@@ -82,6 +83,7 @@
 		0825A1382A0B2536006576A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RestaurantDetailsView.xib; sourceTree = "<group>"; };
 		0825A13B2A0B2542006576A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NearbySearchResultsView.xib; sourceTree = "<group>"; };
 		0825A13D2A0B260D006576A2 /* RestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantController.swift; sourceTree = "<group>"; };
+		0831DC352A529157003C3FB3 /* NearbySearchControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySearchControllerTests.swift; sourceTree = "<group>"; };
 		0858B1272A195DBC00B05E58 /* GoogleAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPITests.swift; sourceTree = "<group>"; };
 		086193372A194EE500632E73 /* RestaurantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTests.swift; sourceTree = "<group>"; };
 		087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 			path = RestaurantDetails;
 			sourceTree = "<group>";
 		};
+		0831DC342A52913A003C3FB3 /* Nearby Search */ = {
+			isa = PBXGroup;
+			children = (
+				0831DC352A529157003C3FB3 /* NearbySearchControllerTests.swift */,
+			);
+			path = "Nearby Search";
+			sourceTree = "<group>";
+		};
 		0858B1292A195DC200B05E58 /* GoogleAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +207,8 @@
 		087ADDC329D6614A006C54C4 /* Nearby Search Results Display */ = {
 			isa = PBXGroup;
 			children = (
-				087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */,
 				0825A13C2A0B2542006576A2 /* NearbySearchResultsView.xib */,
+				087ADDC429D661BB006C54C4 /* NearbySearchResultsViewController.swift */,
 				08CD94DD2A087C3D00AADE17 /* RestaurantSearchResultsController.swift */,
 			);
 			path = "Nearby Search Results Display";
@@ -313,6 +323,7 @@
 		08F7DDB7296E58A40097FC9C /* LunchQuestTests */ = {
 			isa = PBXGroup;
 			children = (
+				0831DC342A52913A003C3FB3 /* Nearby Search */,
 				0858B1292A195DC200B05E58 /* GoogleAPI */,
 				086193362A194ED100632E73 /* Model */,
 			);
@@ -521,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0831DC362A529157003C3FB3 /* NearbySearchControllerTests.swift in Sources */,
 				086193382A194EE500632E73 /* RestaurantTests.swift in Sources */,
 				0858B1282A195DBC00B05E58 /* GoogleAPITests.swift in Sources */,
 			);

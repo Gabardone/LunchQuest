@@ -106,7 +106,7 @@ extension UIViewController {
         // Use a root property for ease.
         let restaurantController = RestaurantController(
             id: restaurant.id,
-            modelProperty: WritableProperty.root(initialValue: restaurant).readonly()
+            model: WritableProperty.root(initialValue: restaurant).readonly()
         )
         let restaurantViewController = RestaurantDetailsViewController(controller: restaurantController)
         navigationController?.pushViewController(restaurantViewController, animated: true)

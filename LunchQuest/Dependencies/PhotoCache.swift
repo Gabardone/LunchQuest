@@ -5,7 +5,6 @@
 //  Created by Óscar Morales Vivó on 4/30/23.
 //
 
-import GlobalDependencies
 import os
 import SwiftCache
 import UIKit
@@ -87,7 +86,31 @@ extension PhotoCacheID.MaxSize {
     }
 }
 
+extension PhotoCacheID.MaxSize: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .original:
+            return "original"
+
+        case .height(let height):
+            return "h\(height)"
+
+        case .width(let width):
+            return "w\(width)"
+
+        case let .size(width, height):
+            return "w\(width)xh\(height)"
+        }
+    }
+}
+
 extension PhotoCacheID: Hashable {}
+
+extension PhotoCacheID: CustomStringConvertible {
+    var description: String {
+        return "\(id)-\(maxSize)"
+    }
+}
 
 extension Photo {
     /// Per Google's `PlacePhoto` API, images won't be bigger than 1600 on either dimension.

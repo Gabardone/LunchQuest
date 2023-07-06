@@ -6,6 +6,7 @@
 //
 
 import CoreLocation
+import FileSystemDependency
 @testable import LunchQuest
 import NetworkDependency
 import XCTest
@@ -24,7 +25,7 @@ final class GoogleAPITests: XCTestCase {
             networkExpectation.fulfill()
             guard let components = URLComponents(url: url, resolvingAgainstBaseURL: true) else {
                 XCTFail("Received URL cannot be decomposed into components")
-                return Task { expectedData }
+                return expectedData
             }
 
             // Now we check that the URL is what we expect.
@@ -59,7 +60,7 @@ final class GoogleAPITests: XCTestCase {
                 XCTFail("Couldn't find expected keywords query item.")
             }
 
-            return Task { expectedData }
+            return expectedData
         }
 
         let anyNetwork: any Network = mockNetwork
@@ -142,5 +143,75 @@ final class GoogleAPITests: XCTestCase {
         verifyIncompleteJSONPlace(.init(name: name, geometry: geometry))
 
         XCTAssertNotNil(Restaurant(googleJSON: GoogleAPI.Place(placeId: placeId, name: name, geometry: geometry)))
+    }
+
+    /// Checks the standard behavior of the built image cache.
+    func testImageCache() async throws {
+        // We're going to need a dummy image to get the data from and pass around.
+        let imageCGSize = CGSize(width: 10.0, height: 10.0)
+        let imageSize = PhotoCacheID.MaxSize.size(width: 10, height: 10)
+        let renderer = UIGraphicsImageRenderer(size: imageCGSize)
+        let image = renderer.image { context in
+            UIColor.red.setFill()
+            context.fill(.init(origin: .zero, size: imageCGSize))
+            UIColor.yellow.setStroke()
+
+            let cgContext = context.cgContext
+            cgContext.setLineWidth(2.0)
+
+            cgContext.beginPath()
+            cgContext.move(to: .zero)
+            cgContext.addLine(to: .init(x: imageCGSize.width, y: imageCGSize.height))
+            cgContext.strokePath()
+
+            cgContext.beginPath()
+            cgContext.move(to: .init(x: 0.0, y: imageCGSize.height))
+            cgContext.addLine(to: .init(x: imageCGSize.width, y: 0.0))
+            cgContext.strokePath()
+        }
+
+        guard let pngData = image.pngData() else {
+            XCTFail("Uh, can't get the image data")
+            return
+        }
+
+        let mockImageID = PhotoCacheID(id: .init(rawValue: "Potato"), maxSize: imageSize)
+
+        let networkExpectation = expectation(description: "Called `Network.dataFor(url:)`")
+        let mockNetwork = MockNetwork { url in
+            XCTAssertEqual(url, mockImageID.placePhotoURL)
+            networkExpectation.fulfill()
+            return pngData
+        }
+
+        let writeDataExpectation = expectation(description: "Called `FileSystem.write(data:fileURL:doNotOverwrite:`")
+        let mockFileSystem = ComposableFileSystem(
+            dataForOverride: { _ in
+                throw NSError(domain: NSCocoaErrorDomain, code: NSFileReadNoSuchFileError)
+            },
+            writeDataOverride: { data, fileURL, doNotOverwrite in
+                XCTAssertEqual(data, pngData)
+                XCTAssertEqual(fileURL, GoogleAPI.photoCacheLocalFileDirectory.appending(component: "\(mockImageID)"))
+                XCTAssertFalse(doNotOverwrite)
+                writeDataExpectation.fulfill()
+            },
+            removeFileAtOverride: { _ in XCTFail("remove file") },
+            makeDirectoryAtOverride: { _ in XCTFail("make directory") }
+        )
+
+        var mockingDependencies = GlobalDependencies.default
+        mockingDependencies.override(keyPath: \.network, with: mockNetwork)
+        mockingDependencies.override(keyPath: \.fileSystem, with: mockFileSystem)
+
+        let imageCache = GoogleAPI.buildPhotoCache(dependencies: mockingDependencies)
+
+        let cachedImage = try await imageCache.cachedValueWith(identifier: mockImageID)
+
+        await fulfillment(of: [networkExpectation, writeDataExpectation])
+
+        // The actual image size will depend on scaling factor, but we can test for it existing and being square.
+        XCTAssertNotNil(cachedImage)
+        XCTAssertEqual(cachedImage?.size.width, cachedImage?.size.height)
+        XCTAssertNotEqual(cachedImage?.size.width, 0)
     }
 }

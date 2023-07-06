@@ -14,7 +14,7 @@ class NearbySearchResultsViewController: ContainerUIComponent<RestaurantSearchRe
         // Just redirect to the right nib and stuff.
         let listController = RestaurantsListController(
             id: UUID(),
-            modelProperty: controller.model.readOnlyKeyPath(\.restaurants)
+            model: controller.model.readOnlyKeyPath(\.restaurants)
         )
         self.restaurantsListViewController = RestaurantsListViewController(controller: listController)
         super.init(controller: controller, nibName: "NearbySearchResultsView", bundle: nil)

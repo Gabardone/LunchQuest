@@ -157,7 +157,7 @@ extension NearbySearchViewController {
         let contentViewController = contentViewController ?? {
             let controller = RestaurantSearchResultsController(
                 id: UUID(),
-                modelProperty: controller.model.searchResultsModel(initialValue: searchResults)
+                model: controller.model.searchResultsModel(initialValue: searchResults)
             )
 
             let contentViewController = NearbySearchResultsViewController(
