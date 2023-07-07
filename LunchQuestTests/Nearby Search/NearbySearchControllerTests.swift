@@ -7,12 +7,13 @@
 
 import CoreLocation
 @testable import LunchQuest
+import SwiftUX
 import XCTest
 
 final class NearbySearchControllerTests: XCTestCase {
-    class MockRestaurantPersistence: RestaurantPersistence {
-        struct MockError: Error {}
+    struct MockError: Error {}
 
+    private class MockRestaurantPersistence: RestaurantPersistence {
         var fetchNearbyRestaurantsOverride: ((String?) async throws -> LunchQuest.RestaurantSearchResults)?
         func fetchNearbyRestaurants(searchTerms: String?) async throws -> LunchQuest.RestaurantSearchResults {
             if let fetchNearbyRestaurantsOverride {
@@ -23,6 +24,8 @@ final class NearbySearchControllerTests: XCTestCase {
         }
     }
 
+    private static let petersCreek = CLLocation(latitude: 37.27661, longitude: -122.19913) // You should go there.
+
     @MainActor
     func testHappySearch() async {
         let mockPersistence = MockRestaurantPersistence()
@@ -30,8 +33,7 @@ final class NearbySearchControllerTests: XCTestCase {
         let searchController = NearbySearchController(id: UUID(), model: model, persistence: mockPersistence)
 
         let mockSearchTerms = "Potato"
-        let petersCreek = CLLocation(latitude: 37.27661, longitude: -122.19913) // You should go there.
-        let mockResults = RestaurantSearchResults(location: petersCreek, restaurants: [])
+        let mockResults = RestaurantSearchResults(location: Self.petersCreek, restaurants: [])
         let fetchExpectation = expectation(description: "Called fetchNearbyRestaurants")
         mockPersistence.fetchNearbyRestaurantsOverride = { searchTerms in
             fetchExpectation.fulfill()
@@ -84,7 +86,7 @@ final class NearbySearchControllerTests: XCTestCase {
         mockPersistence.fetchNearbyRestaurantsOverride = { searchTerms in
             fetchExpectation.fulfill()
             XCTAssertEqual(searchTerms, mockSearchTerms)
-            throw MockRestaurantPersistence.MockError()
+            throw MockError()
         }
 
         let loadingExpectation = expectation(description: "Controller's model updated to loading")
@@ -100,7 +102,7 @@ final class NearbySearchControllerTests: XCTestCase {
             case .error(error: let error):
                 errorExpectation.fulfill()
                 XCTAssertTrue(hasStartedLoading)
-                XCTAssertTrue(error is MockRestaurantPersistence.MockError)
+                XCTAssertTrue(error is MockError)
 
             default:
                 XCTFail("Unexpectedly updated controller's model to \(loadState)")
@@ -110,6 +112,41 @@ final class NearbySearchControllerTests: XCTestCase {
         searchController.fetchNearbyRestaurants(searchTerms: mockSearchTerms)
 
         await fulfillment(of: [fetchExpectation, loadingExpectation, errorExpectation], timeout: 100.0)
+
+        subscription.cancel()
+    }
+
+    func testSearchResultsModel() {
+        let loadingStateModel = WritableProperty.root(initialValue: LoadState<RestaurantSearchResults>.uninitialized)
+        let initialModel = RestaurantSearchResults(location: Self.petersCreek, restaurants: [])
+        let searchResultsModel = loadingStateModel.searchResultsModel(initialValue: initialModel)
+
+        XCTAssertEqual(searchResultsModel.value, initialModel)
+
+        let laterModel = RestaurantSearchResults(location: Self.petersCreek, restaurants: [.init(
+            id: .init(rawValue: "Pizza!"),
+            latitude: Self.petersCreek.coordinate.latitude,
+            longitude: Self.petersCreek.coordinate.longitude,
+            name: "Redwoods Pizza"
+        )])
+
+        let updateExpectation = expectation(description: "Got a search results update")
+        let subscription = searchResultsModel.updates.sink { searchResults in
+            updateExpectation.fulfill()
+            XCTAssertEqual(searchResults, laterModel)
+        }
+
+        // We run some other flows to enusre that we _only_ get updates when the results themselves are updated.
+        loadingStateModel.value = .loading(task: Task {}, searchTerms: "Pizza!")
+        loadingStateModel.value = .error(error: MockError())
+
+        XCTAssertEqual(searchResultsModel.value, initialModel)
+
+        loadingStateModel.value = .loading(task: Task {}, searchTerms: "Redwoods!")
+        loadingStateModel.value = .success(data: laterModel)
+        loadingStateModel.value = .done
+
+        waitForExpectations(timeout: 1.0)
 
         subscription.cancel()
     }
