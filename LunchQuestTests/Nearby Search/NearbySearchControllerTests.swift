@@ -53,7 +53,7 @@ final class NearbySearchControllerTests: XCTestCase {
                 XCTAssertEqual(searchTerms, mockSearchTerms)
                 hasStartedLoading = true
 
-            case .success(data: let searchResults):
+            case let .success(data: searchResults):
                 XCTAssertTrue(hasStartedLoading)
                 resultsExpectation.fulfill()
                 XCTAssertEqual(searchResults, mockResults)
@@ -99,7 +99,7 @@ final class NearbySearchControllerTests: XCTestCase {
                 XCTAssertEqual(searchTerms, mockSearchTerms)
                 hasStartedLoading = true
 
-            case .error(error: let error):
+            case let .error(error: error):
                 errorExpectation.fulfill()
                 XCTAssertTrue(hasStartedLoading)
                 XCTAssertTrue(error is MockError)

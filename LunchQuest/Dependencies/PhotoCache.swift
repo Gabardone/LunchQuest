@@ -92,10 +92,10 @@ extension PhotoCacheID.MaxSize: CustomStringConvertible {
         case .original:
             return "original"
 
-        case .height(let height):
+        case let .height(height):
             return "h\(height)"
 
-        case .width(let width):
+        case let .width(width):
             return "w\(width)"
 
         case let .size(width, height):
@@ -108,7 +108,7 @@ extension PhotoCacheID: Hashable {}
 
 extension PhotoCacheID: CustomStringConvertible {
     var description: String {
-        return "\(id)-\(maxSize)"
+        "\(id)-\(maxSize)"
     }
 }
 
