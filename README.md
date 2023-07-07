@@ -36,6 +36,12 @@ off the basic classes as having it around tended to confuse things.
 a multilayered data pipeline system that just incidentally is pretty good at caches. The one used in this app is the
 MVP version, but most of the enhancements can be built on top of this structure just within the layered components.
 
+- NetworkDependency & FileSystemDependency: `GlobalDependencies` was already a thing, based on some prior work
+where I needed to build a very simple global dependency injection framework for use in a new product. `SwiftCache` and
+the needs of this app made it clear that building up simple common dependencies as their own packages was an idea with
+potential. Both are kept exceedingly simple so far but it remains a good idea to build what you need and no more. I'm
+sure future projects will see new features in those as well.
+
 - ImageLoadingView: Contained within `Iutilitis` (it will probably see its own package at some point) this is a good,
 if still too simple, replacement for `SDWebImage` facilities and other similar tools. I included placeholder image
 support and I believe it would be generally usable with some additional configurability, better testing coverage and
