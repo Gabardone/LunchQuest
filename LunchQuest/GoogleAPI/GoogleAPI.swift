@@ -17,7 +17,7 @@ enum GoogleAPI {
     static let ErrorDomain = "GoogleAPIErrorDomain"
 
     /// Import this from some vault in a real-world use case.
-    private static let apiKey = "AIzaSyCqWHKkgLxJiSwS63bxfWpQ-XhSQs65H5c"
+    private static let apiKey = "<<BRING YOUR OWN API KEY>>"
 
     static let commonURLComponents: URLComponents = {
         var commonURLComponents = URLComponents()
