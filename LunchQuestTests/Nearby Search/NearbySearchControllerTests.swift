@@ -70,7 +70,10 @@ final class NearbySearchControllerTests: XCTestCase {
 
         searchController.fetchNearbyRestaurants(searchTerms: mockSearchTerms)
 
-        await fulfillment(of: [fetchExpectation, loadingExpectation, resultsExpectation, doneExpectation], timeout: 100.0)
+        await fulfillment(
+            of: [fetchExpectation, loadingExpectation, resultsExpectation, doneExpectation],
+            timeout: 100.0
+        )
 
         subscription.cancel()
     }

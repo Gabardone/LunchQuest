@@ -145,15 +145,11 @@ final class GoogleAPITests: XCTestCase {
         XCTAssertNotNil(Restaurant(googleJSON: GoogleAPI.Place(placeId: placeId, name: name, geometry: geometry)))
     }
 
-    /// Checks the standard behavior of the built image cache.
-    func testImageCache() async throws {
-        // We're going to need a dummy image to get the data from and pass around.
-        let imageCGSize = CGSize(width: 10.0, height: 10.0)
-        let imageSize = PhotoCacheID.MaxSize.size(width: 10, height: 10)
-        let renderer = UIGraphicsImageRenderer(size: imageCGSize)
-        let image = renderer.image { context in
+    private func buildTestImage(size: CGSize) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { context in
             UIColor.red.setFill()
-            context.fill(.init(origin: .zero, size: imageCGSize))
+            context.fill(.init(origin: .zero, size: size))
             UIColor.yellow.setStroke()
 
             let cgContext = context.cgContext
@@ -161,14 +157,22 @@ final class GoogleAPITests: XCTestCase {
 
             cgContext.beginPath()
             cgContext.move(to: .zero)
-            cgContext.addLine(to: .init(x: imageCGSize.width, y: imageCGSize.height))
+            cgContext.addLine(to: .init(x: size.width, y: size.height))
             cgContext.strokePath()
 
             cgContext.beginPath()
-            cgContext.move(to: .init(x: 0.0, y: imageCGSize.height))
-            cgContext.addLine(to: .init(x: imageCGSize.width, y: 0.0))
+            cgContext.move(to: .init(x: 0.0, y: size.height))
+            cgContext.addLine(to: .init(x: size.width, y: 0.0))
             cgContext.strokePath()
         }
+    }
+
+    /// Checks the standard behavior of the built image cache.
+    func testImageCache() async throws {
+        // We're going to need a dummy image to get the data from and pass around.
+        let imageCGSize = CGSize(width: 10.0, height: 10.0)
+        let imageSize = PhotoCacheID.MaxSize.size(width: 10, height: 10)
+        let image = buildTestImage(size: imageCGSize)
 
         guard let pngData = image.pngData() else {
             XCTFail("Uh, can't get the image data")
