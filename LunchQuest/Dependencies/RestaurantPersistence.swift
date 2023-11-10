@@ -11,6 +11,7 @@ import GlobalDependencies
 /**
  Declares the behaviors that we require to obtain information about nearby restaurants.
  */
+@Dependency()
 protocol RestaurantPersistence {
     /**
      Returns the list of nearby restaurants resulting of searching nearby with the given optional keywords.
@@ -21,16 +22,13 @@ protocol RestaurantPersistence {
     func fetchNearbyRestaurants(searchTerms: String?) async throws -> RestaurantSearchResults
 }
 
-/// Dependency protocol for restaurant persistence.
-protocol RestaurantPersistenceDependency: Dependencies {
-    var restaurantPersistence: any RestaurantPersistence { get }
+/// Dependency protocol implementation for GlobalDependencies
+extension GlobalDependencies: RestaurantPersistence.Dependency {
+    #GlobalDependency(type: RestaurantPersistence)
 }
 
-/// Dependency protocol implementation for GlobalDependencies
-extension GlobalDependencies: RestaurantPersistenceDependency {
-    private static let `default` = GoogleAPI.NearbySearch()
-
-    var restaurantPersistence: any RestaurantPersistence {
-        resolveDependency(forKeyPath: \.restaurantPersistence, defaultImplementation: Self.default)
+private struct DefaultRestaurantPersistenceValueFactory: DefaultDependencyValueFactory {
+    static func makeDefaultValue() -> GoogleAPI.NearbySearch {
+        GoogleAPI.NearbySearch()
     }
 }

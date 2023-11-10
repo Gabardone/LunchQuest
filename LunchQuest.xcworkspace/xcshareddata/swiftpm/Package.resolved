@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/AutolayoutHelpers",
       "state" : {
-        "revision" : "579af9fcc2744ae786e150847cc4eec506cdf903",
-        "version" : "1.2.0"
+        "revision" : "6a4a8e7a8665919bf92fa1a2bfcc3ce9cd5778d1",
+        "version" : "1.2.1"
       }
     },
     {
@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/FileSystemDependency.git",
       "state" : {
-        "revision" : "d3d09407f555ce497d8fbbbd43defb5e0491d48f",
-        "version" : "0.0.4"
+        "branch" : "UseDependencies2",
+        "revision" : "4217b572c5a6bbde49770a702e4fe9fa884e89b7"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/GlobalDependencies",
       "state" : {
-        "revision" : "dca8fb31eb9d6efc42b454aa4a5ea812d7d74c23",
-        "version" : "2.0.0"
+        "branch" : "MacroSupport",
+        "revision" : "a18d6e6198fce826e2c0f0ad4998c8f0b07b3945"
       }
     },
     {
@@ -40,8 +40,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/LocationDependency.git",
       "state" : {
-        "revision" : "def4d6e0216463f71d285a2469ac85d1661ff639",
-        "version" : "1.0.0"
+        "branch" : "UseDependencies2",
+        "revision" : "76e24d9ad6218f3014da8eb6f4160db10417184b"
       }
     },
     {
@@ -49,8 +49,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/NetworkDependency",
       "state" : {
-        "revision" : "3d9b7c28594f118b0b61d07842e161c06b8ba906",
-        "version" : "2.0.0"
+        "branch" : "UseDependencies2",
+        "revision" : "cf6cbc99f440728b4890e92f0df424ce7d382d01"
       }
     },
     {
@@ -58,8 +58,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/StronglyTypedID",
       "state" : {
-        "revision" : "437132c1e0f536961b58af280e9077fb180bf8b7",
-        "version" : "1.0.0"
+        "revision" : "3f95d8be33a4fb7b8b614bececa6c4dff4711e54",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+        "version" : "509.0.2"
       }
     },
     {
@@ -67,8 +76,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/SwiftCache.git",
       "state" : {
-        "revision" : "dfb78a0597a516f624073945667877748c9e05b9",
-        "version" : "2.0.0"
+        "branch" : "UseDependencies2",
+        "revision" : "9745c71cb85eecb220818bbb3d37b5cbeb86af1f"
       }
     },
     {
@@ -85,8 +94,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Gabardone/UIComponents",
       "state" : {
-        "revision" : "2a88582cd030840d00cef5607ec7c70996134283",
-        "version" : "1.0.0"
+        "revision" : "d68224b7f5661fb94588774820d1ad1cdfc4ddac",
+        "version" : "1.1.0"
       }
     }
   ],

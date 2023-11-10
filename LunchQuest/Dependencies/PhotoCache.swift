@@ -5,11 +5,20 @@
 //  Created by Óscar Morales Vivó on 4/30/23.
 //
 
+import GlobalDependencies
 import os
 import SwiftCache
 import UIKit
 
-typealias PhotoCache = any Cache<UIImage, PhotoCacheID>
+@Dependency()
+protocol PhotoCache: Cache<UIImage, PhotoCacheID> {
+}
+
+private struct DefaultPhotoCacheValueFactory: DefaultDependencyValueFactory {
+    static func makeDefaultValue() -> any PhotoCache {
+        GoogleAPI.buildPhotoCache()
+    }
+}
 
 extension Logger {
     static let photoCacheLogger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "PhotoCache")
@@ -145,14 +154,6 @@ extension Photo {
     }
 }
 
-protocol PhotoCacheDependency {
-    var photoCache: PhotoCache { get }
-}
-
-extension GlobalDependencies: PhotoCacheDependency {
-    private static var singleton: PhotoCache = GoogleAPI.buildPhotoCache()
-
-    var photoCache: PhotoCache {
-        resolveDependency(forKeyPath: \.photoCache, defaultImplementation: Self.singleton)
-    }
+extension GlobalDependencies: PhotoCache.Dependency {
+    #GlobalDependency(type: any PhotoCache)
 }

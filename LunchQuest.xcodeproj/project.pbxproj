@@ -273,13 +273,6 @@
 			path = "Restaurants Map Display";
 			sourceTree = "<group>";
 		};
-		08F0031D29D51A6200299512 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		08F7DD95296E58A30097FC9C = {
 			isa = PBXGroup;
 			children = (
@@ -287,7 +280,6 @@
 				08F7DDB7296E58A40097FC9C /* LunchQuestTests */,
 				08F7DDC1296E58A40097FC9C /* LunchQuestUITests */,
 				08F7DD9F296E58A30097FC9C /* Products */,
-				08F0031D29D51A6200299512 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -896,16 +888,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/SwiftCache.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = UseDependencies2;
+				kind = branch;
 			};
 		};
 		08A1005F2A3C32C700C67568 /* XCRemoteSwiftPackageReference "LocationDependency" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/LocationDependency.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = UseDependencies2;
+				kind = branch;
 			};
 		};
 		08A100602A3C340C00C67568 /* XCRemoteSwiftPackageReference "UIComponents" */ = {
@@ -920,16 +912,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/GlobalDependencies";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = MacroSupport;
+				kind = branch;
 			};
 		};
 		08A100662A3C354F00C67568 /* XCRemoteSwiftPackageReference "NetworkDependency" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Gabardone/NetworkDependency";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = UseDependencies2;
+				kind = branch;
 			};
 		};
 		08C0C52329DD06AE002CB290 /* XCRemoteSwiftPackageReference "AutolayoutHelpers" */ = {
@@ -945,7 +937,7 @@
 			repositoryURL = "https://github.com/Gabardone/StronglyTypedID";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 		08FE2B422A15EA8E0064E758 /* XCRemoteSwiftPackageReference "SwiftUX" */ = {

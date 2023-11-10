@@ -18,7 +18,7 @@ extension GoogleAPI {
     /**
      Builds a cache that will get photos from Google's `PlacePhoto` API and store them locally/in memory as needed.
      */
-    static func buildPhotoCache(dependencies: GlobalDependencies = .default) -> PhotoCache {
+    static func buildPhotoCache(dependencies: GlobalDependencies = .default) -> some PhotoCache {
         let networkDataSource = NetworkDataSource(dependencies: dependencies)
         let networkSource = BackstopStorageCache(
             storage: networkDataSource,
@@ -48,6 +48,8 @@ extension GoogleAPI {
         )
     }
 }
+
+extension TemporaryStorageCache: PhotoCache where CacheID == PhotoCacheID, Cached == UIImage {}
 
 extension PhotoCacheID {
     var placePhotoURL: URL {

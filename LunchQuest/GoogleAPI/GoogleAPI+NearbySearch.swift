@@ -32,7 +32,7 @@ extension GoogleAPI {
 
         // MARK: - Stored Properties
 
-        let dependencies: any NetworkDependency & LocationDependency
+        let dependencies: any NetworkDependency & LocationManagerDependency
     }
 }
 

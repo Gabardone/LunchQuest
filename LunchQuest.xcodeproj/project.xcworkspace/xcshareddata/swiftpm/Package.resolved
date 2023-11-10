@@ -10,12 +10,47 @@
       }
     },
     {
-      "identity" : "minidepin",
+      "identity" : "filesystemdependency",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Gabardone/MiniDepIn",
+      "location" : "https://github.com/Gabardone/FileSystemDependency.git",
       "state" : {
-        "revision" : "47b9a870c5fcfd0d50dfa02a76b5898d5b55c991",
+        "revision" : "d3d09407f555ce497d8fbbbd43defb5e0491d48f",
+        "version" : "0.0.4"
+      }
+    },
+    {
+      "identity" : "globaldependencies",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/GlobalDependencies",
+      "state" : {
+        "revision" : "dca8fb31eb9d6efc42b454aa4a5ea812d7d74c23",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "iutilitis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/Iutilitis.git",
+      "state" : {
+        "revision" : "aff12366a94caede9472d7009e50e9812ee37b59"
+      }
+    },
+    {
+      "identity" : "locationdependency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/LocationDependency.git",
+      "state" : {
+        "revision" : "def4d6e0216463f71d285a2469ac85d1661ff639",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "networkdependency",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/NetworkDependency",
+      "state" : {
+        "revision" : "3d9b7c28594f118b0b61d07842e161c06b8ba906",
+        "version" : "2.0.0"
       }
     },
     {
@@ -25,6 +60,33 @@
       "state" : {
         "revision" : "437132c1e0f536961b58af280e9077fb180bf8b7",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftcache",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/SwiftCache.git",
+      "state" : {
+        "revision" : "41cc2a59e69c50783d9197ef171cbdf54ee52f9e",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "swiftux",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/SwiftUX.git",
+      "state" : {
+        "revision" : "15789dfd8f6c9cbcfa18956b269fc0673e518207",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "uicomponents",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Gabardone/UIComponents",
+      "state" : {
+        "revision" : "d68224b7f5661fb94588774820d1ad1cdfc4ddac",
+        "version" : "1.1.0"
       }
     }
   ],
